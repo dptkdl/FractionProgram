@@ -43,7 +43,7 @@ class Fraction(object):
         if Fraction.gcd(self.numerator, self.denominator) == 0:
             return "0"
         elif Fraction.get_denominator(self) < 0 and Fraction.get_numerator(self) > 0:
-            return "-"+str(self.get_numerator())+"/"+str(abs(self.get_denominator()))
+            return f"-{self.get_numerator()}/{abs(self.get_denominator())}"
         elif Fraction.get_denominator(self) < 0 and Fraction.get_numerator(self) < 0:
-            return str(abs(self.get_numerator()))+"/"+str(abs(self.get_denominator()))
-        return str(self.get_numerator())+"/"+str(self.get_denominator())
+            return f"{abs(self.get_numerator())}/{abs(self.get_denominator())}"
+        return f"{self.get_numerator()}/{self.get_denominator()}"
