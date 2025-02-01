@@ -34,9 +34,8 @@ class Fraction(object):
             return max(commonFactors)
 
     def get_numerator(self):
-        #TODO
-        pass
-
+        return self.numerator//Fraction.gcd(self.numerator, self.denominator)
+        
     def get_denominator(self):
         #TODO
         pass
