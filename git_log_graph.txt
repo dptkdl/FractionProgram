@@ -1,0 +1,42 @@
+repo_link: https://github.com/dptkdl/FractionProgram
+
+*   35cc7ba	Julie Ann Xyrene Lalimarmo	Sat Feb 1 21:25:15 2025 +0800	Merge pull request #11 from dptkdl/cleanup
+|\  
+| * 8916ead	shamika-anne	Sat Feb 1 21:23:03 2025 +0800	fixed chained comparison between operands
+| * 252efd2	shamika-anne	Sat Feb 1 21:19:53 2025 +0800	removed unnecessary else
+| * 23d1c7a	shamika-anne	Sat Feb 1 21:17:24 2025 +0800	changed unnecessary elifs to ifs
+| * 3e5c332	shamika-anne	Sat Feb 1 21:15:49 2025 +0800	changed commonFactors into snake case
+| * fd02f69	shamika-anne	Sat Feb 1 21:12:36 2025 +0800	removed trailing white spaces
+| * 4a37517	shamika-anne	Sat Feb 1 21:03:17 2025 +0800	added necessary comments on init function
+| * 78d301e	dptkdl	Sat Feb 1 20:56:51 2025 +0800	added comments on the gcd function
+|/  
+*   b4ddfd5	shamika	Sat Feb 1 20:50:42 2025 +0800	Merge pull request #10 from dptkdl/getFraction
+|\  
+| * c354941	dptkdl	Sat Feb 1 20:46:51 2025 +0800	changed string concatenation to f-strings, added abs function as needed
+| * 5ac4146	shamika-anne	Sat Feb 1 20:35:34 2025 +0800	removed unnecessary conditions for getFraction
+| * 751ff20	dptkdl	Sat Feb 1 20:23:35 2025 +0800	added missing conditions for different variables
+| * 19574cc	shamika-anne	Sat Feb 1 20:01:35 2025 +0800	added getFraction condition
+|/  
+*   d0dd38f	shamika	Sat Feb 1 19:49:15 2025 +0800	Merge pull request #7 from dptkdl/getDenominator
+|\  
+| * 2143028	dptkdl	Sat Feb 1 19:44:27 2025 +0800	added getDenominator function
+|/  
+*   d657395	Julie Ann Xyrene Lalimarmo	Sat Feb 1 19:41:50 2025 +0800	Merge pull request #6 from dptkdl/getNumerator
+|\  
+| * 10279a0	shamika-anne	Sat Feb 1 19:36:58 2025 +0800	removed ans variable
+| * 95c4a84	dptkdl	Sat Feb 1 19:28:15 2025 +0800	added getNumerator function
+|/  
+*   857093b	Julie Ann Xyrene Lalimarmo	Sat Feb 1 19:23:40 2025 +0800	Merge pull request #4 from dptkdl/gcd
+|\  
+| * 492468d	shamika-anne	Sat Feb 1 19:17:46 2025 +0800	used max function instead of sort to get gcd
+| * 5482df6	shamika-anne	Sat Feb 1 19:11:40 2025 +0800	fixed logic error on lines 22 and 34
+| * 0405bef	dptkdl	Sat Feb 1 18:51:08 2025 +0800	fixed logic error in the gcd function
+| * 2a3afcb	shamika-anne	Sat Feb 1 18:30:10 2025 +0800	added gcd function
+|/  
+*   2344340	shamika	Sat Feb 1 18:15:53 2025 +0800	Merge pull request #1 from dptkdl/init
+|\  
+| * 06ec4be	dptkdl	Sat Feb 1 13:41:21 2025 +0800	fixed logic error on init function
+|/  
+* 0022561	shamika-anne	Sat Feb 1 06:51:25 2025 +0800	added conditions for initialization function
+* a75b05f	shamika-anne	Sat Feb 1 06:26:23 2025 +0800	added program file and unit tests file
+* e3a7efa	Julie Ann Xyrene Lalimarmo	Fri Jan 31 19:11:24 2025 +0800	Initial commit
