@@ -19,8 +19,19 @@ class Fraction(object):
             self.denominator = 0
 
     def gcd(a, b):
-        #TODO
-        pass
+        if a == 0 or b == 0:
+            return 0
+        else:
+            smaller = 0
+            if abs(a) > abs(b):
+                smaller = abs(b)
+            else:
+                smaller = abs(a)
+            commonFactors = []
+            for number in range(1, smaller+1):
+                if a % number == 0 and b % number == 0:
+                    commonFactors.append(number)
+            return max(commonFactors)
 
     def get_numerator(self):
         #TODO
