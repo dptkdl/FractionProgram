@@ -42,12 +42,8 @@ class Fraction(object):
     def get_fraction(self):
         if Fraction.gcd(self.numerator, self.denominator) == 0:
             return "0"
-        if Fraction.get_denominator(self) < 0:
-            return str(self.get_numerator())+"/"+str(self.get_denominator())
-        if Fraction.get_numerator(self) > 0:
-            return str(self.get_numerator())+"/"+str(self.get_denominator())
-        if Fraction.get_denominator(self) < 0:
-            return str(self.get_numerator())+"/"+str(self.get_denominator())
-        if Fraction.get_numerator(self) < 0:
-            return str(self.get_numerator())+"/"+str(self.get_denominator())
+        elif Fraction.get_denominator(self) < 0 and Fraction.get_numerator(self) > 0:
+            return "-"+str(self.get_numerator())+"/"+str(abs(self.get_denominator()))
+        elif Fraction.get_denominator(self) < 0 and Fraction.get_numerator(self) < 0:
+            return str(abs(self.get_numerator()))+"/"+str(abs(self.get_denominator()))
         return str(self.get_numerator())+"/"+str(self.get_denominator())
