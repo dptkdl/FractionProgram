@@ -30,21 +30,20 @@ class Fraction(object):
         if a == 0 or b == 0:
             return 0
         # If both parameters are valid, identifies which parameter is bigger and which is smaller
+        smaller = 0
+        if abs(a) > abs(b):
+            smaller = abs(b)
         else:
-            smaller = 0
-            if abs(a) > abs(b):
-                smaller = abs(b)
-            else:
-                smaller = abs(a)
-            # Creates a list for the common factors of the parameters
-            common_factors = []
-            # Checks which integers from 1 to the smaller number is a common factor
-            # of both parameters and adds that integer to the list
-            for number in range(1, smaller+1):
-                if a % number == 0 and b % number == 0:
-                    common_factors.append(number)
-            # Returns the biggest element
-            return max(common_factors)
+            smaller = abs(a)
+        # Creates a list for the common factors of the parameters
+        common_factors = []
+        # Checks which integers from 1 to the smaller number is a common factor
+        # of both parameters and adds that integer to the list
+        for number in range(1, smaller+1):
+            if a % number == 0 and b % number == 0:
+                common_factors.append(number)
+        # Returns the biggest element
+        return max(common_factors)
 
     def get_numerator(self):
         return self.numerator//Fraction.gcd(self.numerator, self.denominator)
