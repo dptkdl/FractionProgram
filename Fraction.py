@@ -19,18 +19,28 @@ class Fraction(object):
             self.denominator = 0
 
     def gcd(a, b):
+        '''
+        @fn gcd
+        @brief gets the greatest common divisor of two given integers
+        '''
+        # If any of the parameters is 0, returns 0
         if a == 0 or b == 0:
             return 0
+        # If both parameters are valid, identifies which parameter is bigger and which is smaller
         else:
             smaller = 0
             if abs(a) > abs(b):
                 smaller = abs(b)
             else:
                 smaller = abs(a)
+            # Creates a list for the common factors of the parameters
             commonFactors = []
+            # Checks which integers from 1 to the smaller number is a common factor 
+            # of both parameters and adds that integer to the list
             for number in range(1, smaller+1):
                 if a % number == 0 and b % number == 0:
                     commonFactors.append(number)
+            # Returns the biggest element
             return max(commonFactors)
 
     def get_numerator(self):
