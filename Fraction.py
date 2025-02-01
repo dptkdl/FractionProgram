@@ -3,7 +3,7 @@ class Fraction(object):
     def __init__(self, numerator=0, denominator=1):
         if denominator == 0:
             raise ZeroDivisionError
-        elif isinstance(numerator, int):
+        if isinstance(numerator, int):
             self.numerator = numerator
             self.denominator = denominator
         #checks if input is a string
@@ -37,14 +37,14 @@ class Fraction(object):
             else:
                 smaller = abs(a)
             # Creates a list for the common factors of the parameters
-            commonFactors = []
+            common_factors = []
             # Checks which integers from 1 to the smaller number is a common factor
             # of both parameters and adds that integer to the list
             for number in range(1, smaller+1):
                 if a % number == 0 and b % number == 0:
-                    commonFactors.append(number)
+                    common_factors.append(number)
             # Returns the biggest element
-            return max(commonFactors)
+            return max(common_factors)
 
     def get_numerator(self):
         return self.numerator//Fraction.gcd(self.numerator, self.denominator)
