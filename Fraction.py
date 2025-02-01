@@ -38,7 +38,7 @@ class Fraction(object):
                 smaller = abs(a)
             # Creates a list for the common factors of the parameters
             commonFactors = []
-            # Checks which integers from 1 to the smaller number is a common factor 
+            # Checks which integers from 1 to the smaller number is a common factor
             # of both parameters and adds that integer to the list
             for number in range(1, smaller+1):
                 if a % number == 0 and b % number == 0:
@@ -48,7 +48,7 @@ class Fraction(object):
 
     def get_numerator(self):
         return self.numerator//Fraction.gcd(self.numerator, self.denominator)
-        
+
     def get_denominator(self):
         return self.denominator//Fraction.gcd(self.numerator, self.denominator)
 
