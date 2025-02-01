@@ -31,8 +31,7 @@ class Fraction(object):
             for number in range(1, smaller+1):
                 if a % number == 0 and b % number == 0:
                     commonFactors.append(number)
-            commonFactors.sort(reverse=True)
-            return commonFactors[0]
+            return max(commonFactors)
 
     def get_numerator(self):
         #TODO
