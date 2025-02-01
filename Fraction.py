@@ -8,8 +8,15 @@ class Fraction(object):
             self.denominator = denominator
         elif isinstance(numerator, str):
             separated = numerator.split("/")
-            self.numerator = int(separated[0])
-            self.denominator = int(separated[1])
+            if len(separated) != 2 or separated[0].isalpha():
+                self.numerator = 0
+                self.denominator = 0
+            else:
+                self.numerator = int(separated[0])
+                self.denominator = int(separated[1])
+        else:
+            self.numerator = 0
+            self.denominator = 0
 
     def gcd(a, b):
         #TODO
