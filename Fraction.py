@@ -19,8 +19,22 @@ class Fraction(object):
             self.denominator = 0
 
     def gcd(a, b):
-        #TODO
-        pass
+        if a == 0 and b == 0:
+            return 0
+        elif int(a) != a or int(b) != b:
+            return "Invalid input."
+        else:
+            smaller = 0
+            if a>b:
+                smaller = b 
+            else:
+                smaller = a
+            commonFactors = []
+            for number in range(1, smaller+1):
+                if a % number == 0 and b % number == 0:
+                    commonFactors.append(number)
+            commonFactors.sort()
+            return commonFactors[0]
 
     def get_numerator(self):
         #TODO
