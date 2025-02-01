@@ -54,8 +54,9 @@ class Fraction(object):
     def get_fraction(self):
         if Fraction.gcd(self.numerator, self.denominator) == 0:
             return "0"
-        if Fraction.get_denominator(self) < 0 and Fraction.get_numerator(self) > 0:
-            return f"-{self.get_numerator()}/{abs(self.get_denominator())}"
-        if Fraction.get_denominator(self) < 0 and Fraction.get_numerator(self) < 0:
-            return f"{abs(self.get_numerator())}/{abs(self.get_denominator())}"
+        if Fraction.get_denominator(self) < 0:
+            if Fraction.get_numerator(self) > 0:
+                return f"-{self.get_numerator()}/{abs(self.get_denominator())}"
+            if Fraction.get_numerator(self) < 0:
+                return f"{abs(self.get_numerator())}/{abs(self.get_denominator())}"
         return f"{self.get_numerator()}/{self.get_denominator()}"
