@@ -6,8 +6,11 @@ class Fraction(object):
         elif isinstance(numerator, int):
             self.numerator = numerator
             self.denominator = denominator
+        #checks if input is a string
         elif isinstance(numerator, str):
             separated = numerator.split("/")
+            #after splitting, string should be a number and list
+            #should have length 2
             if len(separated) != 2 or separated[0].isalpha():
                 self.numerator = 0
                 self.denominator = 0
