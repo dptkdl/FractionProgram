@@ -21,19 +21,17 @@ class Fraction(object):
     def gcd(a, b):
         if a == 0 and b == 0:
             return 0
-        elif int(a) != a or int(b) != b:
-            return "Invalid input."
         else:
             smaller = 0
-            if a>b:
-                smaller = b 
+            if abs(a) > abs(b):
+                smaller = abs(b)
             else:
-                smaller = a
+                cmaller = abs(a)
             commonFactors = []
             for number in range(1, smaller+1):
                 if a % number == 0 and b % number == 0:
                     commonFactors.append(number)
-            commonFactors.sort()
+            commonFactors.sort
             return commonFactors[0]
 
     def get_numerator(self):
